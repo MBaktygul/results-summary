@@ -34,7 +34,7 @@ ol {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
+  height: 100vh;
   line-height: var(--spacing-l);
 }
 
@@ -60,7 +60,6 @@ h4 {
 /* A elements that don't have a class get default styles */
 a {
   text-decoration: none;
-  color: none;
 }
 
 /* Make images easier to work with */
@@ -105,6 +104,11 @@ body {
   font-family: "Hanken Grotesk", sans-serif;
   font-weight: 500;
 }
+@media (min-width: 376px) {
+  body {
+    margin: auto;
+  }
+}
 
 h1 {
   font-weight: 500;
@@ -113,14 +117,63 @@ h1 {
 
 h2 {
   font-size: 60px;
+  font-weight: 800;
+}
+
+a {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+}
+a:visited {
+  color: hsl(234, 85%, 45%);
+}
+a:hover {
+  color: hsl(39, 100%, 56%);
+}
+
+.wrapper {
+  width: 100%;
+}
+@media (min-width: 376px) {
+  .wrapper {
+    border-radius: 30px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0 0 20px 10px hsl(221, 100%, 96%);
+  }
+  .wrapper:hover {
+    box-shadow: 0 0 20px 0 hsl(241, 100%, 89%);
+  }
+}
+@media (min-width: 769px) {
+  .wrapper {
+    width: 600px;
+  }
 }
 
 .bg-gradient {
   color: hsl(0, 0%, 100%);
   padding: 3rem;
+  max-width: 365px;
   background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+@media (min-width: 376px) {
+  .bg-gradient {
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+  }
+}
+
+.content {
+  width: auto;
+}
+@media (min-width: 769px) {
+  .content {
+    width: 100%;
+  }
 }
 
 .circle {
@@ -137,12 +190,12 @@ h2 {
   gap: 24px;
 }
 
-.medium {
+.font-medium {
   font-size: 22px;
   font-weight: 700;
 }
 
-.bold-white {
+.font-transparent {
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -194,19 +247,38 @@ h2 {
   padding: 14px;
   border-radius: 30px;
 }
-.button > a {
+.button:hover {
+  cursor: pointer;
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+.button a:hover {
   color: hsl(0, 0%, 100%);
 }
 
+.attribution {
+  font-size: 14px;
+}
+
+.grid {
+  display: grid;
+}
 @media (min-width: 376px) {
   .grid {
-    max-width: 735px;
-    margin: auto;
-    display: grid;
-    justify-items: center;
     align-items: center;
     justify-content: center;
     align-content: center;
+    grid-template-rows: 90% 1fr;
+  }
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 769px) {
+  .flex {
+    display: flex;
+    flex-direction: row;
   }
 }
 
@@ -222,6 +294,11 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+@media (min-width: 769px) {
+  .flex-left {
+    justify-content: center;
+  }
 }
 
 .flex-row {
