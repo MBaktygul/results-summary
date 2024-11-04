@@ -1,0 +1,309 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  height: 100vh;
+  line-height: var(--spacing-l);
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Font face */
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url("/assets/fonts/static/HankenGrotesk-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url("/assets/fonts/static/HankenGrotesk-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url("/assets/fonts/static/HankenGrotesk-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
+}
+@media (min-width: 376px) {
+  body {
+    margin: auto;
+  }
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 22px;
+}
+
+h2 {
+  font-size: 60px;
+  font-weight: 800;
+}
+
+a {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+}
+a:visited {
+  color: hsl(234, 85%, 45%);
+}
+a:hover {
+  color: hsl(39, 100%, 56%);
+}
+
+.wrapper {
+  width: 100%;
+}
+@media (min-width: 376px) {
+  .wrapper {
+    border-radius: 30px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0 0 20px 10px hsl(221, 100%, 96%);
+  }
+  .wrapper:hover {
+    box-shadow: 0 0 20px 0 hsl(241, 100%, 89%);
+  }
+}
+@media (min-width: 769px) {
+  .wrapper {
+    width: 600px;
+  }
+}
+
+.bg-gradient {
+  color: hsl(0, 0%, 100%);
+  padding: 3rem;
+  max-width: 365px;
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+@media (min-width: 376px) {
+  .bg-gradient {
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+  }
+}
+
+.content {
+  width: auto;
+}
+@media (min-width: 769px) {
+  .content {
+    width: 100%;
+  }
+}
+
+.circle {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: linear-gradient(hsl(256, 72%, 46%), hsla(241, 72%, 46%, 0));
+}
+
+.gap-xs {
+  gap: 12px;
+}
+.gap-s {
+  gap: 24px;
+}
+
+.font-medium {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.font-transparent {
+  color: hsla(0, 0%, 100%, 0.5);
+}
+
+.bold-light {
+  font-weight: 700;
+  color: hsla(224, 30%, 27%, 0.5);
+}
+
+.bold-dark {
+  font-weight: 700;
+  color: hsl(224, 30%, 27%);
+}
+
+.padding {
+  padding: 14px;
+}
+
+.margin {
+  margin: 24px;
+}
+
+.reaction {
+  color: hsl(0, 100%, 67%);
+  background-color: hsla(0, 100%, 67%, 0.1);
+  border-radius: 8px;
+}
+
+.memory {
+  color: hsl(39, 100%, 56%);
+  background-color: hsla(39, 100%, 56%, 0.1);
+  border-radius: 8px;
+}
+
+.verbal {
+  color: hsl(166, 100%, 37%);
+  background-color: hsla(166, 100%, 37%, 0.1);
+  border-radius: 8px;
+}
+
+.visual {
+  color: hsl(234, 85%, 45%);
+  background-color: hsla(234, 85%, 45%, 0.1);
+  border-radius: 8px;
+}
+
+.button {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(224, 30%, 27%);
+  padding: 14px;
+  border-radius: 30px;
+}
+.button:hover {
+  cursor: pointer;
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+.button a:hover {
+  color: hsl(0, 0%, 100%);
+}
+
+.attribution {
+  font-size: 14px;
+}
+
+.grid {
+  display: grid;
+}
+@media (min-width: 376px) {
+  .grid {
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    grid-template-rows: 90% 1fr;
+  }
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 769px) {
+  .flex {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.flex-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+@media (min-width: 769px) {
+  .flex-left {
+    justify-content: center;
+  }
+}
+
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*# sourceMappingURL=style.css.map */

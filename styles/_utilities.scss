@@ -1,0 +1,43 @@
+.grid {
+  display: grid;
+
+  @media (min-width: $breakpoint-tablet) {
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    grid-template-rows: 90% 1fr;
+  }
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $breakpoint-desktop) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.flex-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  @media (min-width: $breakpoint-desktop) {
+    justify-content: center;
+  }
+}
+
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+}
