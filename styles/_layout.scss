@@ -125,5 +125,18 @@
 .attribution {
   z-index: -1;
   font-size: 14px;
+
+ a { 
+    color: $white;
+    text-decoration: none;
+  
+    &:visited {
+      color: $cobalt-blue;
+    }
+  
+    &:hover {
+        color: $orange-yellow;
+    }
+  }
 }
 

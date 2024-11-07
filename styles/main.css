@@ -237,6 +237,16 @@ h2 {
   z-index: -1;
   font-size: 14px;
 }
+.attribution a {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+}
+.attribution a:visited {
+  color: hsl(234, 85%, 45%);
+}
+.attribution a:hover {
+  color: hsl(39, 100%, 56%);
+}
 
 .grid {
   display: grid;
