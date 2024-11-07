@@ -35,6 +35,7 @@
 
 .content {
   width: auto;
+  margin: 24px;
 
   @media (min-width: $breakpoint-desktop) {
     width: 100%;
@@ -48,68 +49,58 @@
   background: linear-gradient($violet-blue, $persian-blue);
 }
 
-.gap {
-  &-xs {
-    gap: $gap-xs;
-  }
-  &-s {
-    gap: $gap-s;
-  }
-}
-
 // specific font stylings
-.font-medium {
+.text-medium {
 	font-size: $font-size-medium;
 	font-weight: $font-weight-bold;
 }
 
-.font-transparent {
+.white-transparent {
   color: transparentize($white, 0.5);
 }
 
-.bold-light {
+.text-bold {
+  color: $dark-gray-blue;
   font-weight: $font-weight-bold;
+
+}
+
+.gray-transparent {
   color: transparentize($dark-gray-blue, 0.5);
 }
 
-.bold-dark {
-  font-weight: $font-weight-bold;
-  color: $dark-gray-blue;
-}
 
-// spacings
-.padding {
+// list items
+.items {
+  padding: 0;
+  margin: 0;
+
+  .item {
   padding: 14px;
-}
-
-.margin {
-  margin: 24px;
-}
-
-// details
-.reaction {
-  color: $light-red;
-  background-color: transparentize($light-red, 0.9);
   border-radius: $border-radius-s;
+
+    &.item-reaction {
+      color: $light-red;
+      background-color: transparentize($light-red, 0.9);
+    }
+
+    &.item-memory {
+      color: $orange-yellow;
+      background-color: transparentize($orange-yellow, 0.9);
+    }
+
+    &.item-verbal {
+      color: $green-teal;
+      background-color: transparentize($green-teal, 0.9);
+    }
+
+    &.item-visual {
+      color: $cobalt-blue;
+      background-color: transparentize($cobalt-blue, 0.9);
+    }
+  }
 }
 
-.memory {
-  color: $orange-yellow;
-  background-color: transparentize($orange-yellow, 0.9);
-  border-radius: $border-radius-s;
-}
-
-.verbal {
-  color: $green-teal;
-  background-color: transparentize($green-teal, 0.9);
-  border-radius: $border-radius-s;
-}
-
-.visual {
-  color: $cobalt-blue;
-  background-color: transparentize($cobalt-blue, 0.9);
-  border-radius: $border-radius-s;
-}
 
 // button
 .button {
@@ -124,6 +115,8 @@
   }
 
   a {   
+    color: $white;
+
     &:hover {
         color: $white;
     }
@@ -132,6 +125,7 @@
 
 // attribution
 .attribution {
+z-index: -1;
   font-size: 14px;
 }
 

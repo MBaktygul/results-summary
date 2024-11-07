@@ -25,12 +25,14 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  gap: $gap-s;
 }
 
 .flex-left {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  gap: $gap-xs;
 
   @media (min-width: $breakpoint-desktop) {
     justify-content: center;
@@ -40,4 +42,5 @@
 .flex-row {
   display: flex;
   justify-content: space-between;
+  gap: $gap-xs;
 }

@@ -64,7 +64,7 @@ a {
 
 /* Make images easier to work with */
 img,
-picture {
+picture, i {
   max-width: 100%;
   display: block;
 }
@@ -169,6 +169,7 @@ a:hover {
 
 .content {
   width: auto;
+  margin: 24px;
 }
 @media (min-width: 769px) {
   .content {
@@ -183,62 +184,47 @@ a:hover {
   background: linear-gradient(hsl(256, 72%, 46%), hsla(241, 72%, 46%, 0));
 }
 
-.gap-xs {
-  gap: 12px;
-}
-.gap-s {
-  gap: 24px;
-}
-
-.font-medium {
+.text-medium {
   font-size: 22px;
   font-weight: 700;
 }
 
-.font-transparent {
+.white-transparent {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.bold-light {
+.text-bold {
+  color: hsl(224, 30%, 27%);
   font-weight: 700;
+}
+
+.gray-transparent {
   color: rgba(48, 59, 90, 0.5);
 }
 
-.bold-dark {
-  font-weight: 700;
-  color: hsl(224, 30%, 27%);
+.items {
+  padding: 0;
+  margin: 0;
 }
-
-.padding {
+.items .item {
   padding: 14px;
+  border-radius: 8px;
 }
-
-.margin {
-  margin: 24px;
-}
-
-.reaction {
+.items .item.item-reaction {
   color: hsl(0, 100%, 67%);
   background-color: rgba(255, 87, 87, 0.1);
-  border-radius: 8px;
 }
-
-.memory {
+.items .item.item-memory {
   color: hsl(39, 100%, 56%);
   background-color: rgba(255, 176, 31, 0.1);
-  border-radius: 8px;
 }
-
-.verbal {
+.items .item.item-verbal {
   color: hsl(166, 100%, 37%);
   background-color: rgba(0, 189, 145, 0.1);
-  border-radius: 8px;
 }
-
-.visual {
+.items .item.item-visual {
   color: hsl(234, 85%, 45%);
   background-color: rgba(17, 37, 212, 0.1);
-  border-radius: 8px;
 }
 
 .button {
@@ -251,11 +237,15 @@ a:hover {
   cursor: pointer;
   background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
 }
+.button a {
+  color: hsl(0, 0%, 100%);
+}
 .button a:hover {
   color: hsl(0, 0%, 100%);
 }
 
 .attribution {
+  z-index: -1;
   font-size: 14px;
 }
 
@@ -288,12 +278,14 @@ a:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
+  gap: 20px;
 }
 
 .flex-left {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  gap: 14px;
 }
 @media (min-width: 769px) {
   .flex-left {
@@ -304,4 +296,5 @@ a:hover {
 .flex-row {
   display: flex;
   justify-content: space-between;
+  gap: 14px;
 }/*# sourceMappingURL=main.css.map */
