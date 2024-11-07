@@ -9,72 +9,125 @@
 	</head>
 	<body class="grid">
 		<!--wrapper -->
-		<div class="wrapper flex">
+		<main class="wrapper flex">
 			<!--bg-gradient wrapper-->
-			<div class="bg-gradient flex-center gap-s">
-				<h1 class="font-transparent">Your Result</h1>
-				<div class="flex-center circle gap-xs">
+			<section class="bg-gradient flex-center">
+				<!--section title-->
+				<h1 class="white-transparent">Your Result</h1>
+				<!--score wrapper-->
+				<article class="flex-center circle">
 					<h2>76</h2>
-					<span class="font-transparent">of 100</span>
-				</div>
-				<div class="flex-center gap-xs">
-					<span class="font-medium">Great</span>
-					<p class="font-transparent">You scored higher than 65% of the people who have taken these tests.</p>
-				</div>
-			</div>
+					<span class="white-transparent">of 100</span>
+				</article>
+				<!--feedback wrapper-->
+				<aside class="flex-center">
+					<span class="text-medium">Great</span>
+					<p class="white-transparent">You scored higher than 65% of the people who have taken these tests.</p>
+				</aside>
+			</section>
 			<!--summary wrapper-->
-			<div class="content flex-left gap-s margin">
+			<section class="content flex-left">
 				<h3>Summary</h3>
-				<div class="flex-left gap-xs">
-					<!--reaction-->
-					<div class="reaction flex-row padding">
-						<div class="flex-row gap-xs">
-							<img
-								src="https://raw.githubusercontent.com/MBaktygul/results-summary/refs/heads/main/assets/images/icon-reaction.svg"
-								alt="lightning icon" />
-							<span>Reaction</span>
+				<ul class="items flex-left">
+					<!--reaction score-->
+					<li class="item item-reaction flex-row" aria-labelledby="reaction-label">
+						<div class="flex-row">
+							<!--icon-->
+							<i class="i-reaction" aria-hidden="true">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
+									<path
+										stroke="#F55"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="1.25"
+										d="M10.833 8.333V2.5l-6.666 9.167h5V17.5l6.666-9.167h-5Z" />
+								</svg>
+							</i>
+							<span id="reaction-label">Reaction</span>
 						</div>
-						<div><span class="bold-dark">80 </span><span class="bold-light"> / 100</span></div>
-					</div>
-					<!--memory-->
-					<div class="memory flex-row padding">
-						<div class="flex-row gap-xs">
-							<img
-								src="https://raw.githubusercontent.com/MBaktygul/results-summary/refs/heads/main/assets/images/icon-memory.svg"
-								alt="brain icon" />
-							<span>Memory</span>
+						<div><span class="text-bold">80 </span><span class="text-bold gray-transparent"> / 100</span></div>
+					</li>
+					<!--memory score-->
+					<li class="item item-memory flex-row" aria-labelledby="reaction-label">
+						<div class="flex-row">
+							<!--icon-->
+							<i class="i-memory" aria-hidden="true">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
+									<path
+										stroke="#FFB21E"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="1.25"
+										d="M5.833 11.667a2.5 2.5 0 1 0 .834 4.858" />
+									<path
+										stroke="#FFB21E"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="1.25"
+										d="M3.553 13.004a3.333 3.333 0 0 1-.728-5.53m.025-.067a2.083 2.083 0 0 1 2.983-2.824m.199.054A2.083 2.083 0 1 1 10 3.75v12.917a1.667 1.667 0 0 1-3.333 0M10 5.833a2.5 2.5 0 0 0 2.5 2.5m1.667 3.334a2.5 2.5 0 1 1-.834 4.858" />
+									<path
+										stroke="#FFB21E"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="1.25"
+										d="M16.447 13.004a3.334 3.334 0 0 0 .728-5.53m-.025-.067a2.083 2.083 0 0 0-2.983-2.824M10 3.75a2.085 2.085 0 0 1 2.538-2.033 2.084 2.084 0 0 1 1.43 2.92m-.635 12.03a1.667 1.667 0 0 1-3.333 0" />
+								</svg>
+							</i>
+							<span id="memory-label">Memory</span>
 						</div>
-						<div><span class="bold-dark">92 </span><span class="bold-light"> / 100</span></div>
-					</div>
-					<!--verbal-->
-					<div class="verbal flex-row padding">
-						<div class="flex-row gap-xs">
-							<img
-								src="https://raw.githubusercontent.com/MBaktygul/results-summary/refs/heads/main/assets/images/icon-verbal.svg"
-								alt="message icon" />
-							<span>Verbal</span>
+						<div><span class="text-bold">92 </span><span class="text-bold gray-transparent"> / 100</span></div>
+					</li>
+					<!--verbal score-->
+					<li class="item item-verbal flex-row" aria-labelledby="reaction-label">
+						<div class="flex-row">
+							<!--icon-->
+							<i class="i-memory" aria-hidden="true">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
+									<path
+										stroke="#00BB8F"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="1.25"
+										d="M7.5 10h5M10 18.333A8.333 8.333 0 1 0 1.667 10c0 1.518.406 2.942 1.115 4.167l-.699 3.75 3.75-.699A8.295 8.295 0 0 0 10 18.333Z" />
+								</svg>
+							</i>
+							<span id="memory-label">Verbal</span>
 						</div>
-						<div><span class="bold-dark">61 </span><span class="bold-light"> / 100</span></div>
-					</div>
-					<!--visual-->
-					<div class="visual flex-row padding">
-						<div class="flex-row gap-xs">
-							<img
-								src="https://raw.githubusercontent.com/MBaktygul/results-summary/refs/heads/main/assets/images/icon-visual.svg"
-								alt="eye icon" />
-							<span>Visual</span>
+						<div><span class="text-bold">61 </span><span class="text-bold gray-transparent"> / 100</span></div>
+					</li>
+					<!--visual score-->
+					<li class="item item-visual flex-row" aria-labelledby="reaction-label">
+						<div class="flex-row">
+							<!--icon-->
+							<i class="i-memory" aria-hidden="true">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
+									<path
+										stroke="#1125D6"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="1.25"
+										d="M10 11.667a1.667 1.667 0 1 0 0-3.334 1.667 1.667 0 0 0 0 3.334Z" />
+									<path
+										stroke="#1125D6"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="1.25"
+										d="M17.5 10c-1.574 2.492-4.402 5-7.5 5s-5.926-2.508-7.5-5C4.416 7.632 6.66 5 10 5s5.584 2.632 7.5 5Z" />
+								</svg>
+							</i>
+							<span id="memory-label">Visual</span>
 						</div>
-						<div><span class="bold-dark">72 </span><span class="bold-light"> / 100</span></div>
-					</div>
-				</div>
+						<div><span class="text-bold">72 </span><span class="text-bold gray-transparent"> / 100</span></div>
+					</li>
+				</ul>
 				<!--button-->
 				<div class="button flex-center">
-					<a href="'#"> Continue</a>
+					<a href="#"> Continue</a>
 				</div>
-			</div>
-		</div>
+			</section>
+		</main>
 		<!--attribution-->
-		<div class="attribution flex-center gap-xs">
+		<div class="attribution flex-center">
 			<span>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a> </span
 			><span>Coded by<a href="https://github.com/MBaktygul" target="_blank"> Baktygul</a></span>
 		</div>
