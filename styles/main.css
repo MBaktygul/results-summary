@@ -120,17 +120,6 @@ h2 {
   font-weight: 800;
 }
 
-a {
-  color: hsl(0, 0%, 100%);
-  text-decoration: none;
-}
-a:visited {
-  color: hsl(234, 85%, 45%);
-}
-a:hover {
-  color: hsl(39, 100%, 56%);
-}
-
 .wrapper {
   width: 100%;
 }
